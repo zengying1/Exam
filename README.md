@@ -6,6 +6,7 @@ my sql!!
 
 
 1.create tables codes:
+
 use test;
 create table Student(
 		SNO varchar(20),
@@ -26,6 +27,7 @@ create table Choose(
 
 
 2.insert code:
+
 insert into student values("S00001","张三",20,"计算机学院");
 insert into student values("S00002","李四",19,"通信学院");
 insert into student values("S00003","王五",21,"计算机学院");
@@ -44,13 +46,16 @@ insert into choose values("S00003","C3",70);
 
 
 3.select codes:
+
 select course.* from course,choose,student where course.CourseID=choose.CourseID and choose.SNO=student.SNO and student.Name="王五";
 
 4.UPDATE
+
 update student set age=age+2 where College="计算机学院";
 
 
 5.delete codes:
+
 delete student,choose from student,choose,course where student.SNO=choose.SNO and choose.CourseID=course.CourseID and student.Name="李四";
 
 
